@@ -10,7 +10,6 @@ public class Constants {
     public static final String KEY_LAT = "latitude";
     public static final String KEY_LONG = "longitude";
     public static final String JSON_ARRAY = "result";
-
     public static final long MINIMUM_UPDATE_TIME = 5000;
 }
 

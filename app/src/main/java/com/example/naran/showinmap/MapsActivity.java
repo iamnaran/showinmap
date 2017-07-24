@@ -20,7 +20,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.naran.showinmap.Constants.Constants;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -61,6 +60,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
         mMap = googleMap;
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -73,7 +73,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             return;
         }
         mMap.setMyLocationEnabled(true);
-        Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Welcome ", Toast.LENGTH_SHORT).show();
         getGpsData();
 
     }
@@ -81,15 +81,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void getGpsData() {
 
 
+
+
         final Handler handler = new Handler();
         final Runnable r = new Runnable() {
             @Override
             public void run() {
                 handler.postDelayed(this, Constants.MINIMUM_UPDATE_TIME);
+
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.DATA_URL, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.e("HELLO", "Response: " + response.toString());
+                        Log.e("HELLO", "Response: " + response);
                         String LAST_KNOW_LATITUDE = "";
                         String LAST_KNOW_LONGITUDE = "";
                         try {
@@ -115,11 +118,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         if (marker != null){
                             marker.remove();
                         }
-                            marker = mMap.addMarker(new MarkerOptions()
-                                    .position(new LatLng(lat, log))
-                                    .title("Current Location")
-                                    .icon(BitmapDescriptorFactory.fromBitmap(icon_bus)));
-                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(marker.getPosition(),15));
+                        marker = mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(lat, log))
+                                .title("Current Location")
+                                .icon(BitmapDescriptorFactory.fromBitmap(icon_bus)));
+
 
                     }
                 }, new Response.ErrorListener() {
