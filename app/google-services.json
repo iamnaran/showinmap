@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "529953867015",
+    "firebase_url": "https://sahaj-ambulance.firebaseio.com",
+    "project_id": "sahaj-ambulance",
+    "storage_bucket": "sahaj-ambulance.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529953867015:android:ecf32759e9fd94cf",
+        "android_client_info": {
+          "package_name": "com.example.naran.showinmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529953867015-d19nfp4jrqgajleh9ei43djdn6rkkku0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.naran.showinmap",
+            "certificate_hash": "4b736620222a84db72ffc89f12d3c20f3e9f8eec"
+          }
+        },
+        {
+          "client_id": "529953867015-g8g4013dm7pspr5mak875enoh95ocok0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCINw3tX5ii0sOeptBgGoi3n4YfpKiuHB8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529953867015-g8g4013dm7pspr5mak875enoh95ocok0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

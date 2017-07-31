@@ -1,4 +1,9 @@
 <resources>
-    <string name="app_name">Show In Map</string>
+    <string name="app_name"> Sahaj Ambulance </string>
     <string name="title_activity_maps">Show in Map</string>
+
+
+    <string name="FCM_PREF">com.example.naran.showinmap.fcm_pref</string>
+    <string name="FCM_TOKEN">com.example.naran.showinmap.fcm_token</string>
+
 </resources>
