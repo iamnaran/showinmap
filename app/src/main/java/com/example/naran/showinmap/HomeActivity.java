@@ -79,7 +79,8 @@ public class HomeActivity extends AppCompatActivity {
                     public void onClick(View v) {
 
 
-                        requestAmbulanceFun();
+                       Intent intent = new Intent(HomeActivity.this,MapsActivity.class);
+                        startActivity(intent);
 
                     }
                 });
