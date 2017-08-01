@@ -30,7 +30,7 @@ import java.util.Map;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Button request_ambulance, ambulance_list;
+    private Button request_ambulance, ambulance_list, tips;
 
     private TextView textViewUsername, textViewContact, textViewEmail;
 
@@ -48,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
         ambulance_list = (Button) findViewById(R.id.ambulance_list);
 
         textViewUsername = (TextView) findViewById(R.id.textviewUsername);
-
+        tips = (Button) findViewById(R.id.tips);
 
         textViewEmail = (TextView) findViewById(R.id.textviewEmail);
 
@@ -57,6 +57,14 @@ public class HomeActivity extends AppCompatActivity {
         textViewUsername.setText(SharedPrefManager.getInstance(this).getuserName());
 
         sendToken();
+
+        tips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                tipsFunction();
+            }
+        });
 
 
         request_ambulance.setOnClickListener(new View.OnClickListener() {
@@ -104,7 +112,11 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+
+
     }
+
+
 
 
     @Override
@@ -182,6 +194,16 @@ public class HomeActivity extends AppCompatActivity {
 
 
     private void sendNotification() {
+
+
+    }
+
+    private void tipsFunction() {
+
+
+        Toast.makeText(this, "Treatment tips", Toast.LENGTH_SHORT).show();
+        // Tips
+
 
 
     }
