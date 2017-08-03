@@ -55,6 +55,7 @@ public class AmbulanceListAdapter extends RecyclerView.Adapter<AmbulanceListAdap
                 String phoneNumber = "tel:" + ambuList.getContact_number();
                 intent.setData(Uri.parse(phoneNumber));
                 context.startActivity(intent);
+
             }
         });
 
